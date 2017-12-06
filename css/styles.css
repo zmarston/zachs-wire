@@ -1,6 +1,61 @@
 * {
   box-sizing: border-box;
-  border: 1px dashed grey;
+  /*border: 1px dashed grey;*/
+}
+.sides {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.left {
+  float: left;
+  background-color: lightyellow;
+  width: 50%;
+  height: 100%;
+}
+.top-left {
+  width: 50%;
+  height: 100px;
+  background-color: lightyellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.bottom-left {
+  width: 50%;
+  height: 100px;
+  background-color: lightyellow;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.right {
+  float: left;
+  background-color: tan;
+  width: 50%;
+  height: 100%;
+}
+.top-right {
+  width: 50%;
+  height: 100px;
+  background-color: tan;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.bottom-right {
+  width: 50%;
+  height: 100px;
+  background-color: tan;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
 }
 
 body {
@@ -23,15 +78,12 @@ body {
 .footer {
   height: 100px;
 }
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-
-}
 .container {
-  width: 100%;
+  background-color: white;
+  width: 80%;
   max-width: 1150px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .col-4 {
   float: left;
@@ -73,5 +125,11 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     height: 1020px;
+  }
+  .bottom-left, .bottom-right, .top-right, .top-left {
+    display: none;
+  }
+  .container {
+    background-color: transparent !important;
   }
 }
